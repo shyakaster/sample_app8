@@ -1,6 +1,5 @@
 require 'spec_helper'
 describe "Static pages" do
-	let(:base_title) {"Ruby on Rails Tutorial Sample App"}
 	describe "Home page" do
 		it "should have the h1'Sample App'" do
 			visit '/static_pages/home'
@@ -8,7 +7,7 @@ describe "Static pages" do
 		end
 		it"should have title 'Home'" do
 			visit '/static_pages/home'
-			page.should have_selector('title', :title => "#{base_title} | Home")
+			page.should have_selector('title', :text => "Ruby on rails tutorial Sample App | Home")
 		end
 	end
 	describe "Help_page" do
@@ -18,7 +17,7 @@ describe "Static pages" do
 		end
 		it "should have the title 'Help'" do
 			visit '/static_pages/help'
-			page.should have_selector('title', :title => "#{base_title} | Help")
+			page.should have_selector('title', :text => "Ruby on rails tutorial Sample App | Help")
 		end
 	end
 	describe "About us" do
@@ -27,18 +26,8 @@ describe "Static pages" do
 			page.should have_selector('h1', :text => 'About us')
 		end
 		it "should have the title 'About us'" do
-			visit '/static_pages/About'
-			page.should have_selector('title', :title =>  "#{base_title} | About us")
-		end
-	end
-	describe "contact" do 
-		it "should have the h1 'contact'" do
-			visit '/static_pages/contact'
-			page.should have_selector('h1', :text => 'Contact')
-		end
-		it "should have the title 'contact'" do 
-			visit '/static_pages/contact'
-			page.should have_selector('title',:title => "#{base_title} | Contact")
+			visit '/static_pages/About us'
+			page.should have_selector('title', :text =>  "Ruby on rails tutorial Sample App | About us")
 		end
 	end
 end
