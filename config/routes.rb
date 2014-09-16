@@ -5,8 +5,11 @@ SampleApp8::Application.routes.draw do
 
   get "static_pages/About"
 
+<<<<<<< HEAD
   get "static_pages/contact"
 
+=======
+>>>>>>> e8e8a602c96ae6495e6aac50b281bd3fc8c7887d
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
