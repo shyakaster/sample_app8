@@ -1,15 +1,12 @@
 SampleApp8::Application.routes.draw do
-  get "static_pages/home"
+get "users/new"
 
-  get "static_pages/help"
+  match'/home',to: 'static_pages#home'
+  match '/signup', to: 'users#new'
+  match '/help', to: 'static_pages#help'
+  match '/about', to: 'static_pages#about'
+  match '/contact', to: 'static_pages#contact'
 
-  get "static_pages/About"
-
-<<<<<<< HEAD
-  get "static_pages/contact"
-
-=======
->>>>>>> e8e8a602c96ae6495e6aac50b281bd3fc8c7887d
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
